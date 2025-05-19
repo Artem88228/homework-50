@@ -9,11 +9,104 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel">
+    const Header = props => {
+        return (
+            <header className="header">
+                <div className="container">
+                    <a><img src={'img/logo.jpg'}/></a>
+                    <nav className="header-nav">
+                        <ul className="nav-list">
+                            <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Links</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Payment</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        )
+    }
 
+    const Content = props => {
+        return (
+            <main>
+                <section className="content">
+                    <div className="container">
+                        <h1 className="section-title">Lorem ipsum</h1>
+                        <img src={'img/poster-2.jpg'} className="image"/>
+                        <p className="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut eveniet harum optio
+                            quis,
+                            quos ullam. Cumque delectus dolore, doloremque, explicabo nostrum possimus provident quia
+                            rerum,
+                            tenetur totam vitae voluptatibus.
+                        </p>
+                        <p className="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut eveniet harum optio
+                            quis,
+                            quos ullam. Cumque delectus dolore, doloremque, explicabo nostrum possimus provident quia
+                            rerum,
+                            tenetur totam vitae voluptatibus.
+                        </p>
+                        <p className="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut eveniet harum optio
+                            quis,
+                            quos ullam. Cumque delectus dolore, doloremque, explicabo nostrum possimus provident quia
+                            rerum,
+                            tenetur totam vitae voluptatibus.
+                        </p>
+                    </div>
+                </section>
+            </main>
+        )
+    }
+
+    const Sidebar = props => {
+        return (
+            <aside className="sidebar">
+                <nav className="sidebar-nav">
+                    <ul className="sidebar-list">
+                        <li className="sidebar-item"><a href="#">About us</a></li>
+                        <li className="sidebar-item"><a href="#">Service</a></li>
+                        <li className="sidebar-item"><a href="#">Projects</a></li>
+                        <li className="sidebar-item"><a href="#">News</a></li>
+                        <li className="sidebar-item"><a href="#">Bonus</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        )
+    }
+
+    const Footer = props => {
+        return (
+            <footer className="footer">
+                <div className="container">
+                    <p className="footer-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate error facere facilis fuga
+                        illo iusto modi, quae ratione. A ad assumenda consectetur dolorem, earum exercitationem expedita
+                        facilis illo reprehenderit voluptate
+                    </p>
+                    <div className="copyright">Lorem upsum</div>
+                </div>
+            </footer>
+        )
+    }
+
+    const root = document.getElementById('root');
+
+    ReactDOM.createRoot(root).render(
+        <>
+            <Header/>
+            <Content/>
+            <Sidebar/>
+            <Footer/>
+        </>
+    );
 </script>
 </body>
 
